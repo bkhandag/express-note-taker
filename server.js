@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const notesDB = require('./db/db.json')
+const notesDB = require('./db/db.json');
 const uuid = require('./helpers/uuid');
 
 const PORT = 3001;
@@ -12,6 +12,24 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
+
+// GET request for /api/notes
+app.get('/api/notes', (req, res) => { 
+  fs.readFile('./db/db.json','utf8',(err,data) => {
+    if (err) {
+      console.error(err);
+    } else {
+        // Convert string into JSON object
+        const parsedReviews = JSON.parse(data);
+        res.json(parsedReviews);
+        console.log(`this is line 25 ${data}`);
+      }
+      
+});
+
+  
+  console.log(notesDB);
+});
 
 // GET request for notes
 app.get('/notes', (req, res) => {
@@ -24,10 +42,10 @@ app.get('/notes', (req, res) => {
   });
  
   
-// GET request for /api/notes
-app.get('/api/notes', (req, res) => res.json(notesDB));
+
 
 // POST request to add a note
+//TOdo make the saved note appear on notes.html
 app.post('/api/notes', (req, res) => {
     // Log that a POST request was received
     console.info(`${req.method} request received to add a review`);
