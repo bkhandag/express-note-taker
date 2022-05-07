@@ -97,7 +97,18 @@ app.post('/api/notes', (req, res) => {
     }
   });
 
-// GET request for *
+//Delete a note
+  // app.delete('/api/notes/:note', (req, res) => {
+
+  //   const deleteNote = req.params.note;
+
+  //   if (deleteNote) {
+  //     for (let i = 0; i < )
+  //   }
+  //   res.send('Got a DELETE request at /user')
+  // })
+
+// GET request for * all
 app.get('*', (req, res) => {
     // Log our request to the terminal
     console.info(`${req.method} request received to get reviews`);

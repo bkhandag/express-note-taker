@@ -1,9 +1,5 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
         "title": "Hello",
         "text": "from the other side",
         "review_id": "7466"
