@@ -15,6 +15,8 @@ This is an application called Note Taker that can be used to write and save note
 
 -  [Installation Instructions](#installation)
 
+-  [Link to Deployed app](#link-to-deployed-application)
+
 -  [Screenshots](#screenshot)
 
 -  [Questions](#questions)
@@ -50,6 +52,9 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 * On the back end, the application includes a `db.json` file that will be used to store and retrieve notes using the `fs` module.
 
 * This web application is deployed on heroku
+
+## Link to deployed Application:
+https://express-note-taker-bgk.herokuapp.com/
 
 ## Screenshots:
 ![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.](./Assets/11-express-homework-demo-01.png)
